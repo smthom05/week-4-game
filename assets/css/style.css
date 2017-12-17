@@ -69,3 +69,13 @@ h1 {
   color: black;
   font-weight: bold;
 }
+
+#random-score {
+  font-size: 36px;
+  padding-left: 30px;
+}
+
+#player-score {
+  font-size: 36px;
+  padding-left: 30px;
+}
