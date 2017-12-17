@@ -1,6 +1,9 @@
 body {
   background-image: url("../images/crystal-background.jpg");
-  background-repeat: repeat;
+  background-repeat: no-repeat;
+  background-position: center fixed;
+  background-size: cover;
+}
 }
 
 

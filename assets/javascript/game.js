@@ -2,7 +2,6 @@ $(document).ready(function() {
 
   //  GLOBAL VARIABLES
   // ====================================================
-
   // Generate our random target Score
   var targetTotal = Math.floor((Math.random() * 102) + 19);
 
@@ -25,7 +24,6 @@ $(document).ready(function() {
   var winCount = 0;
   var lossCount = 0;
   var userTotal = 0;
-
 
   // FUNCTIONS
   // ====================================================
@@ -53,10 +51,8 @@ $(document).ready(function() {
   // Attaching a data value to our crystal buttons
 
   $("#red-crystal").on("click", function() {
-
     userTotal += redCrystal;
     $("#player-score").text(userTotal)
-
     if (userTotal === targetTotal) {
       winCount ++;
       $("#wins").text(winCount);
@@ -69,10 +65,8 @@ $(document).ready(function() {
   });
 
   $("#blue-crystal").on("click", function() {
-
     userTotal += blueCrystal;
     $("#player-score").text(userTotal)
-
     if (userTotal === targetTotal) {
       winCount ++;
       $("#wins").text(winCount);
@@ -85,10 +79,8 @@ $(document).ready(function() {
   });
 
   $("#yellow-crystal").on("click", function() {
-
     userTotal += yellowCrystal;
     $("#player-score").text(userTotal)
-
     if (userTotal === targetTotal) {
       winCount ++;
       $("#wins").text(winCount);
@@ -101,10 +93,8 @@ $(document).ready(function() {
   });
 
   $("#green-crystal").on("click", function() {
-
     userTotal += greenCrystal;
     $("#player-score").text(userTotal)
-
     if (userTotal === targetTotal) {
       winCount ++;
       $("#wins").text(winCount);
@@ -115,5 +105,4 @@ $(document).ready(function() {
       reset();
     }
   });
-
 });
