@@ -1,0 +1,64 @@
+body {
+  background-image: url("../images/crystal-background.jpg");
+  background-repeat: repeat;
+}
+
+
+header {
+  font-size: 36px;
+  background: brown;
+  color: white;
+  width: 33%;
+  padding: 20px;
+  margin: 5px;
+}
+
+.container {
+  background: beige;
+  width: 50%;
+  padding-bottom: 25px;
+  padding-top: 25px;
+  padding-left: 10px;
+  color: green;
+  font-size: 20px;
+  line-height:1.5;
+  margin: 5px;
+}
+
+#target-score {
+  padding: 41px;
+  background: green;
+  width: 25%;
+  color: yellow;
+  float: left;
+  margin: 5px;
+  font-size: 20px;
+}
+
+#wins-losses {
+  padding: 21px;
+  width: 8%;
+  background: teal;
+  display: inline-block;
+  margin: 5px;
+  color: white;
+  font-size: 20px;
+  clear: both;
+  overflow: auto;
+}
+
+.crystals {
+  height: 100px;
+  width: 100px;
+  margin: 5px;
+  margin-left: 10px;
+}
+
+.user-score {
+  background: green;
+  color: yellow;
+  margin: 5px;
+  padding: 41px;
+  width: 25%;
+  font-size: 20px;
+}
