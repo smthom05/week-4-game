@@ -10,51 +10,78 @@
   <!-- Added link to the CSS Reset -->
   <link rel="stylesheet" href="assets/css/reset.css">
 
+  <!-- Added link to Bootstrap Library -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+
+
   <!-- Added link to my CSS file -->
   <link rel="stylesheet" href="assets/css/style.css">
-
-  <!-- Added link to my JS file -->
-  <script src="assets/javascript/game.js"></script>
 
 </head>
 <body>
 
-  <header>
-    <h1> Crystals Collector Game!</h1>
-  </header>
-
   <div class="container">
-    <p>You will be given a random number at the start of the game.</p>
-    <br>
-    <p>There are four crystals below. By clicking on a crystal you will add a specific amount of points to your total score.</p>
-    <br>
-    <p>You win the game by matching your total score to the random number. You lose the game if your total score goes above the random number.</p>
-    <br>
-    <p>The value of each crystal is hidden from you until you click on it.</p>
-    <br>
-    <p>Each time a new game starts, the values of the crystals will change.</p>
-    <br>
-    <p>Good Luck!</p>
+    <div class="row">
+      <div class="col-lg-6 col-md-6 col-sm-12">
+        <h1>Crystals Collector!</h1>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col-lg-6 col-md-6 col-sm-12 instructions">
+        <p>You will be given a random number at the start of the game.</p>
+        <br>
+        <p>There are four crystals below. By clicking on a crystal you will add a specific amount of points to your total score.</p>
+        <br>
+        <p>You win the game by matching your total score to the random number. You lose the game if your total score goes above the random number.</p>
+        <br>
+        <p>The value of each crystal is hidden from you until you click on it.</p>
+        <br>
+        <p>Each time a new game starts, the values of the crystals will change.</p>
+        <br>
+        <p>Good Luck!</p>
+      </div>
+    </div>
+
+
+
+    <div class="row">
+      <div class="col-lg-4 col-md-4 target-score">
+        Score to get = <span id="random-score"></span>
+      </div>
+
+      <div class="col-lg-2 col-md-2" id="wins-losses">
+        Wins: <span id="wins"> 0 </span>
+        <br>
+        Losses: <span id="losses"> 0 </span>
+      </div>
+      <div class="col-lg-4 col-md-4">
+      </div>
+      <div class="col-lg-2 col-md-2 btn btn-large start-game">
+        Start Game
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col-lg-6 col-md-6">
+        <span>
+          <img class="crystals" id="red-crystal" src="assets/images/redcrystal.png" alt="Red Crystal">
+          <img class="crystals" id="blue-crystal" src="assets/images/bluecrystal.png" alt="Blue Crystal">
+          <img class="crystals" id="yellow-crystal" src="assets/images/yellowcrystal.png" alt="Yellow Crystal">
+          <img class="crystals" id="green-crystal" src="assets/images/greencrystal.png" alt="Green Crystal">
+        </span>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col-lg-4 col-md-4 user-score">
+        Your Score = <span id="player-score"></span>
+      </div>
+    </div>
   </div>
 
-  <div id="target-score">Score to get = </div>
-  <div id="wins-losses">
-    <p>Wins: 0 </p>
-    <br>
-    <p>Losses: 0 </p>
-  </div>
-
-  <div>
-    <img class="crystals" src="assets/images/redcrystal.png" alt="Red Crystal">
-    <img class="crystals" src="assets/images/bluecrystal.png" alt="Blue Crystal">
-    <img class="crystals" src="assets/images/yellowcrystal.png" alt="Yellow Crystal">
-    <img class="crystals" src="assets/images/greencrystal.png" alt="Green Crystal">
-  </div>
-
-  <div class="user-score">
-    <p>Your Score = </p>
-    <p>  </p>
-  </div>
+  <!-- Added link to my JS file -->
+  <script src="assets/javascript/game.js"></script>
 
 </body>
 </html>
