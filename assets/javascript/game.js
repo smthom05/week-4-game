@@ -4,7 +4,9 @@ $(document).ready(function() {
   // Generate our random target Score
   var targetTotal = Math.floor((Math.random() * 102) + 19);
 
-  // Create each crystals object variables.
+  // var crystalImages = ["assets/images/redcrystal.png", "assets/images/bluecrystal.png", "assets/images/yellowcrystal.png", "assets/images/greencrystal.png"];
+
+  // Create each crystal's object variable.
   var redCrystal = {
     value: Math.floor((Math.random()*12)+1),
     onClick: function() {
@@ -24,10 +26,16 @@ $(document).ready(function() {
         }
       });
     },
+    // displayImage: function() {
+    //   $("#red").html("<img src=" + crystalImages[0] + ">");
+    // },
   };
 
   var blueCrystal = {
     value: Math.floor((Math.random()*12)+1),
+    // displayImage: function() {
+    //   $("#blue").html("<img src=" + crystalImages[1] + ">");
+    // },
     onClick: function() {
       $("#blue-crystal").on("click", function() {
         userTotal += blueCrystal.value;
@@ -42,9 +50,10 @@ $(document).ready(function() {
           $("#losses").text(lossCount);
           alert("You Lost! You went over " + targetTotal);
           reset();
-        }
+        };
       });
     },
+
   };
 
   var yellowCrystal = {
@@ -103,13 +112,13 @@ $(document).ready(function() {
 
   // FUNCTIONS
   // ====================================================
-  function reset(){
+  function reset() {
     targetTotal = Math.floor((Math.random() * 102) + 19);
     userTotal = 0;
-    redCrystal.value;
-    blueCrystal.value;
-    yellowCrystal.value;
-    greenCrystal.value;
+    redCrystal.value = Math.floor((Math.random()*12)+1);
+    blueCrystal.value = Math.floor((Math.random()*12)+1);
+    yellowCrystal.value = Math.floor((Math.random()*12)+1);
+    greenCrystal.value = Math.floor((Math.random()*12)+1);
     $("#player-score").text(userTotal);
     $("#random-score").text(targetTotal);
 
@@ -124,10 +133,33 @@ $(document).ready(function() {
   $("#losses").text(lossCount);
   $("#player-score").text(userTotal);
 
+
+  // redCrystal.displayImage();
   redCrystal.onClick();
+  // blueCrystal.displayImage();
   blueCrystal.onClick();
   yellowCrystal.onClick();
   greenCrystal.onClick();
 
+  });
 
-});
+// I made attempts to use JQuery to render the images, but kept running into issues. These are the various failed random code snippets... They are out of context now and in random order....
+
+  // Create a loop to render the crystal images.
+
+  // for (i = 0; i < crystalImages.length; i++) {
+  //   var imageCrystal = $("<img>");
+  //
+  //   imageCrystal.addClass("crystals");
+  //
+  //   imageCrystal.attr("src", crystalImages[i]);
+  //
+  //   $(".crystals").append(imageCrystal);
+  //
+  // };
+
+  // for (j = 0; i <crystalImages.length;i++){
+  //   var idNum = ["red","blue", "yellow", "green"];
+  //
+  //   imageCrystal.attr("id", idNum[i]);
+  // };
